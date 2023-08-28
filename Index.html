@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PresupuestoApp</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <headear>
+        <h1 class="text-center m-5">Aplicación Presupuesto</h1>
+    </headear>
+    <main class="container">
+        <section>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <form id="formPresupuesto">
+                        <label for="idPresu" class="form-label my-3">Ingresa tu Presupuesto</label>
+                        <input type="number" class="form-control my-3" name="idPresu"  id="idPresu">
+                        <button type="submit" id="botonPresu" class="btn btn-outline-success">Agregar Presupuesto</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+        <section>   
+            <div class="row g-3">
+                <div class="col-7 col-md-5">
+                    <form id="formGastos">
+                        
+                        <label for="idPresu" class="form-label my-3">Ingresa tus Gastos</label>
+                        <input type="text" class="form-control my-3 mt-1" name="idGasto" id="nomGasto"
+                            placeholder="Nombre del Item">
+                        <input type="number" class="form-control my-3" name="idMonto" id="valorGas"
+                            placeholder="Valor del Item">
+                        <button type="button" class="btn btn-outline-danger text-capitalize" onclick="inputGasto()"
+                            id="enviarGasto">Añadir Gasto</button>
+                    </form> 
+
+                </div>
+
+                <div Id="Listado" class="col-5 col-md-6 mt-5">
+                    <div class="presupuesto">
+                        <h5>PRESUPUESTO</h5>
+                        <P id="presutable">$0</P>   
+                    </div>
+
+                    <table id="tablaGastos" class="table">
+                        
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Gastos</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Trash</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contenido" >
+    
+                        </tbody>
+                    </table>
+
+                    <div class="row g-3 mt-5" >
+                        <div class="col-7 col-md-5 mt-5">
+                            <h5>Gasto Total</h5>
+                            <P id="gasto-tabla">$0</P>   
+                        </div>
+                        <div class="col-5 col-md-6 mt-5">
+                            <h5>Saldo</h5>
+                            <P id="Saldo-tabla">$0</P>   
+                        </div>
+                        
+                    </div>
+
+                    
+
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="./assets/js/logica.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
